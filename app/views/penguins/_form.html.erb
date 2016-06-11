@@ -1,0 +1,17 @@
+<h2>Create a New Penguin</h2>
+
+<%= form_for(@penguin) do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+  <div>
+    <%= f.label :furry %>
+    <%= f.check_box :furry %>
+  </div>
+  <%= f.submit "Create" %>
+<% end %>

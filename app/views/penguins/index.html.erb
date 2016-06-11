@@ -1,1 +1,22 @@
 <h1>Listing Penguins</h1>
+
+<table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Furry?</th>
+      <th>Modify</th>
+    </tr>
+  <% @penguins.each do |penguin| %>
+    <tr>
+      <td><%= penguin.name %></td>
+      <td><%= penguin.age.to_i %></td>
+      <td><%= penguin.furry %></td>
+      <td>Edit</td>
+      <td>Destroy</td>
+    </tr>
+  <% end %>
+
+</table>
+
+<%= render "penguins/form" %>
